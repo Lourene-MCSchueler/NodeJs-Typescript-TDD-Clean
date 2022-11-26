@@ -4,7 +4,9 @@
     "module": "CommonJS", //gera saida com require
     "target": "es2019", //padrao js (node.green)
     "esModuleInterop": true, //converte para commonjs
-    "allowJs": true //permite arquivo config em js
+    "allowJs": true, //permite arquivo config em js
+    "sourceMap": true,
+    "rootDir": "src"
   }, 
   "include": ["src"],
   "exclude": [

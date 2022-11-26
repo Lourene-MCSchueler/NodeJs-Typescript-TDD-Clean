@@ -1,11 +1,14 @@
 {
   "name": "clean-node",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node dist/main/server.js",
+    "start": "node dist/main/server.js",
+    "debug": "nodemon -L --watch ./dist --inspect=0.0.0.0:9222 --nolazy ./dist/main/server.js",
     "build": "rimraf dist && tsc",
+    "up": "npm run build && docker-compose up -d",
+    "down": "docker-compose down",
     "dev": "sucrase-node src/main/server.ts",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --passWithNoTests --runInBand",
@@ -33,6 +36,7 @@
     "husky": "^8.0.1",
     "jest": "^27.3.1",
     "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.20",
     "rimraf": "^3.0.2",
     "sucrase": "^3.28.0",
     "supertest": "^6.3.0",
@@ -45,8 +49,5 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.10.0",
     "validator": "^13.7.0"
-  },
-  "engines": {
-    "node": "16.x"
   }
 }
