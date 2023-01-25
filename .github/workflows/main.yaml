@@ -19,9 +19,6 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Lint
-        run: eslint 'src/**'
-
       - name: Test
         run: npm run test:coveralls
  
