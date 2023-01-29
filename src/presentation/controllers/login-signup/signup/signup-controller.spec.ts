@@ -1,7 +1,7 @@
-import { EmailInUseError, MissingParamError, ServerError } from '../../../errors'
 import { AccountModel, AddAccountModel, AddAccount, HttpRequest, Validation, Authentication, AuthenticationModel } from './signup-controller-protocols'
 import { SignUpController } from './signup-controller'
-import { ok, serverError, badRequest, forbidden } from '../../../helpers/http/http-helper'
+import { EmailInUseError, MissingParamError, ServerError } from '@/presentation/errors'
+import { ok, serverError, badRequest, forbidden } from '@/presentation/helpers/http/http-helper'
 
 // jest.setTimeout(12000)
 

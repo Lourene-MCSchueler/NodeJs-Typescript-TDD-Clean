@@ -6,11 +6,12 @@
     "esModuleInterop": true, //converte para commonjs
     "allowJs": true, //permite arquivo config em js
     "sourceMap": true,
-    "rootDir": "src"
+    "rootDir": "src",
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
   }, 
   "include": ["src"],
-  "exclude": [
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
+  "exclude": []
 }
